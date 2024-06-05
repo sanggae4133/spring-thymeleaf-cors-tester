@@ -78,20 +78,17 @@ post-test
 `type: "POST", // HTTP 메서드`을 통해 메서드 설정이 가능합니다.<br>
 기타 여러 설정도 html 커스텀을 해서 사용하면 됩니다.
 
-
 ---
 
-This is a BE server CORS tester using a Spring Boot Thymeleaf web server.
+This is a BE server CORS tester using a Spring Boot Thymeleaf web server. 
 
-In the application.properties file, you can set the FE server port by changing:
-
-yaml
-코드 복사
+In the `application.properties` file, you can set the FE server port by changing:
+```
 server.port = 5173
-In ApiTestController.java, you can set the required methods:
+```
 
-typescript
-코드 복사
+In `ApiTestController.java`, you can set the required methods:
+```
 package com.test.cors;
 
 import org.springframework.stereotype.Controller;
@@ -120,10 +117,11 @@ public class ApiTestController {
         return "test";
     }
 }
-You can call the desired BE API in the HTML files under resources/templates.
+```
 
-php
-코드 복사
+You can call the desired BE API in the HTML files under `resources/templates`.
+
+```
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -153,4 +151,6 @@ post-test
 </script>
 </body>
 </html>
-You can set the URL through url: "http://localhost/api/v1/member/signin", // Request URL and set the method through type: "POST", // HTTP Method. You can customize other settings by modifying the HTML as needed.
+```
+
+You can set the URL through `url: "http://localhost/api/v1/member/signin", // Request URL` and set the method through `type: "POST", // HTTP Method`. You can customize other settings by modifying the HTML as needed.
