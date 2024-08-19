@@ -11,7 +11,7 @@ delete-test
 <script>
     $(function() {
         $.ajax({
-            url: "http://localhost:8080/hello/delete", // 요청할 URL (예: ID가 1인 리소스 삭제)
+            url: "http://localhost:8080/cors/hello/delete", // 요청할 URL (예: ID가 1인 리소스 삭제)
             type: "DELETE", // HTTP 메서드
             success: function(response) { // 요청이 성공하면 실행될 콜백 함수
                 alert(response);

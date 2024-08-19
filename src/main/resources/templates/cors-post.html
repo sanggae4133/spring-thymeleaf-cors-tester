@@ -11,7 +11,7 @@ post-test
 <script>
     $(function() {
         $.ajax({
-            url: "http://localhost/api/v1/member/signin", // 요청할 URL
+            url: "http://localhost:8080/cors/hello/post", // 요청할 URL
             type: "POST", // HTTP 메서드
             data: JSON.stringify({ key: "value" }), // 전송할 데이터
             contentType: "application/json", // 전송할 데이터의 타입
